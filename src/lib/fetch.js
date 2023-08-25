@@ -1,7 +1,8 @@
 import exchangeRates from "./rates.json";
 
 // sleep helper to simulate a network call
-const sleep = (time) => new Promise((res) => setTimeout(res, time));
+
+//const sleep = (time) => new Promise((res) => setTimeout(res, time));
 
 // since we only make a single fetch call
 // we're going to use this mock fetch method
@@ -10,7 +11,9 @@ const sleep = (time) => new Promise((res) => setTimeout(res, time));
 export async function fetch(url) {
   const [, search = ""] = url.split("?");
   const params = new URLSearchParams(search);
-  await sleep(800);
+  
+  //await sleep(800);
+  
   // const symbols = new Set((params.get("symbols") || "").split(","));
   const base = params.get("base");
   const rates = exchangeRates[base];

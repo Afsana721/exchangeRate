@@ -1,4 +1,8 @@
-export function RateTable({ currencyData, amount }) {
+import React from "react"; //import react
+
+//export function RateTable({ currencyData, amount }) {
+
+function RateTable({ currencyData, amount }) {
   return (
     <table className="ExchangeRate-table">
       <tbody>
@@ -21,3 +25,6 @@ export function RateTable({ currencyData, amount }) {
     </table>
   );
 }
+
+//export here
+export default RateTable;

@@ -1,4 +1,8 @@
-export function AmountField({ amount, onChange }) {
+import React from "react"; //import react
+
+//export function AmountField({ amount, onChange }) {
+
+function AmountField({ amount, onChange }) {
   return (
     <form className="ExchangeRate-form">
       <input
@@ -10,3 +14,6 @@ export function AmountField({ amount, onChange }) {
     </form>
   );
 }
+
+//export here
+export default AmountField;

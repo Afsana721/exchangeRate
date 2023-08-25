@@ -1,4 +1,8 @@
-export function CurrencyCodePicker({
+import React from "react";
+
+//export function CurrencyCodePicker({ not here
+
+function CurrencyCodePicker({
   supportedCurrencies,
   currencyCode,
   onChange,
@@ -13,3 +17,6 @@ export function CurrencyCodePicker({
     </select>
   );
 }
+
+//export here
+export default CurrencyCodePicker;

@@ -1,12 +1,13 @@
-import { useState, useCallback, useEffect } from "react";
-import { RateTable } from "./RateTable";
-import { CurrencyCodePicker } from "./CurrencyCodePicker";
-import { AmountField } from "./AmountField";
-import { getExchangeRates } from "../api";
+import React,{ useState, useCallback, useEffect } from "react";    // change right way
+import RateTable  from "./RateTable";
+import CurrencyCodePicker from "./CurrencyCodePicker";
+import AmountField from "./AmountField";
+import getExchangeRates from "../api";
 
 const supportedCurrencies = ["USD", "EUR", "JPY", "CAD", "GBP", "MXN"];
+//export function ExchangeRate() {  not here
 
-export function ExchangeRate() {
+function ExchangeRate() {
   const [amount, setAmount] = useState("1.50");
   const [currencyCode, setCurrencyCode] = useState("USD");
   const [currencyData, setCurrencyData] = useState({ USD: 1.0 });
@@ -49,3 +50,6 @@ export function ExchangeRate() {
     </>
   );
 }
+
+
+export default ExchangeRate; // Export the component as default
